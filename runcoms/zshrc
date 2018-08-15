@@ -10,8 +10,23 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+#------------------------------------------------------------------------------
 
+# Authors
+#   John Donovan <jjdonov@gmail.com>
+#
+
+alias vim=nvim
+alias vimdiff=nvim -d
+
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# Set DEFAULT_USER for Agnoster theme
+export DEFAULT_USER=`whoami`
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+# Node Version Manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
